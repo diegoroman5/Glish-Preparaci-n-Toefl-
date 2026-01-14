@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEFL Glish 2026 - Graduación Internacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        body { 
+          font-family: 'Plus Jakarta Sans', sans-serif; 
+          scroll-behavior: smooth;
+        }
+        .glish-gradient { 
+          background: linear-gradient(135deg, #020617 0%, #1e40af 50%, #3b82f6 100%); 
+        }
+        .glass-card { 
+          background: rgba(255, 255, 255, 0.9); 
+          backdrop-filter: blur(12px); 
+          -webkit-backdrop-filter: blur(12px);
+        }
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #3b82f6;
+          border-radius: 4px;
+        }
+
+        :root {
+          --gradient-background-start: rgb(2, 6, 23);
+          --gradient-background-end: rgb(30, 64, 175);
+          --first-color: 18, 113, 255;
+          --second-color: 221, 74, 255;
+          --third-color: 100, 220, 255;
+          --fourth-color: 200, 50, 50;
+          --fifth-color: 180, 180, 50;
+          --pointer-color: 140, 100, 255;
+          --size: 80%;
+          --blending-value: hard-light;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^2.3.0"
+  }
+}
+</script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            first: "moveVertical 30s ease infinite",
+            second: "moveInCircle 20s reverse infinite",
+            third: "moveInCircle 40s linear infinite",
+            fourth: "moveHorizontal 40s ease infinite",
+            fifth: "moveInCircle 20s ease infinite",
+          },
+          keyframes: {
+            moveHorizontal: {
+              "0%": { transform: "translateX(-50%) translateY(-10%)" },
+              "50%": { transform: "translateX(50%) translateY(10%)" },
+              "100%": { transform: "translateX(-50%) translateY(-10%)" },
+            },
+            moveInCircle: {
+              "0%": { transform: "rotate(0deg)" },
+              "50%": { transform: "rotate(180deg)" },
+              "100%": { transform: "rotate(360deg)" },
+            },
+            moveVertical: {
+              "0%": { transform: "translateY(-50%)" },
+              "50%": { transform: "translateY(50%)" },
+              "100%": { transform: "translateY(-50%)" },
+            },
+          },
+        },
+      },
+    };
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "TOEFL Glish 2026",
+  "description": "Plataforma exclusiva de preparación TOEFL que combina la metodología Glish con inteligencia artificial avanzada para coaching personalizado.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
