@@ -70,6 +70,7 @@ export const BackgroundGradientAnimation = ({
       )}px, ${Math.round(curY)}px)`;
 
     move();
+        }
   }, [tgX, tgY]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
