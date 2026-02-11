@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { PILLARS, SCHEDULES } from './constants';
-import AIAssistant from './components/AIAssistant';
 import CountdownTimer from './components/CountdownTimer';
 import { BackgroundGradientAnimation } from './components/ui/background-gradient-animation';
 
 const App: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const whatsappLink = "https://wa.me/523313393940?text=¡Hola! 👋 Quiero información del curso TOEFL Glish 2026 🎓";
 
   // Efecto para detectar el scroll y cambiar el estilo del navbar
   useEffect(() => {
@@ -47,9 +48,9 @@ const App: React.FC = () => {
                 <a href="#horarios" className="hover:text-white transition-colors duration-300">Horarios</a>
                 <a href="#inversion" className="hover:text-white transition-colors duration-300">Inversión</a>
             </div>
-            <button className="bg-white/10 backdrop-blur-xl border border-white/30 text-white px-8 py-3 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-blue-900 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-500">
-              Compara ahora
-            </button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="bg-white/10 backdrop-blur-xl border border-white/30 text-white px-8 py-3 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-blue-900 hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-500">
+              Inscribirme ahora
+            </a>
           </div>
         </div>
       </nav>
@@ -80,9 +81,9 @@ const App: React.FC = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-              <button className="w-full sm:w-auto bg-white text-blue-900 font-black px-16 py-6 rounded-3xl hover:bg-blue-50 transition shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:scale-105 active:scale-95 duration-300 uppercase tracking-widest text-sm pointer-events-auto">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-blue-900 font-black px-16 py-6 rounded-3xl hover:bg-blue-50 transition shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:scale-105 active:scale-95 duration-300 uppercase tracking-widest text-sm pointer-events-auto">
                 Postular Ahora
-              </button>
+              </a>
               <p className="text-blue-200/60 text-[10px] font-bold uppercase tracking-widest max-w-[200px] text-left hidden sm:block leading-tight">
                 Plataforma 100% Online con interacción humana real vía Meet
               </p>
@@ -222,7 +223,7 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Inversión y Pagos Section */}
+      {/* Inversión y Pagos Section - ACTUALIZADA CON PRECIOS */}
       <section id="inversion" className="py-40 px-6 bg-slate-900 overflow-hidden relative scroll-mt-24">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-24">
@@ -238,7 +239,7 @@ const App: React.FC = () => {
                   <div className="text-blue-400 text-4xl"><i className="fas fa-wallet"></i></div>
                   <div>
                     <h4 className="font-black text-xl mb-1 uppercase tracking-tighter">Financiamiento Interno</h4>
-                    <p className="text-blue-100/50 text-sm">Planes diseñados a tu medida sin intereses bancarios.</p>
+                    <p className="text-blue-100/50 text-sm">4 mensualidades de $4,000 MXN sin intereses.</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-8 bg-white/5 p-8 rounded-[2.5rem] border border-white/10 hover:bg-white/10 transition-colors">
@@ -254,19 +255,39 @@ const App: React.FC = () => {
             <div className="lg:w-1/2 relative">
               <div className="bg-white p-16 rounded-[5rem] shadow-[0_50px_100px_rgba(0,0,0,0.5)] relative z-10 text-center border-[12px] border-slate-800">
                 <div className="w-24 h-24 bg-blue-600 rounded-[2rem] flex items-center justify-center text-white text-4xl mx-auto mb-10 shadow-2xl">
-                  <i className="fas fa-lock"></i>
+                  <i className="fas fa-graduation-cap"></i>
                 </div>
-                <h3 className="text-3xl font-black text-slate-900 mb-6 uppercase tracking-tighter leading-none">Costo del Programa<br/><span className="text-blue-600 text-lg">TOEFL Glish 2026</span></h3>
-                <div className="bg-slate-100 py-8 px-10 rounded-3xl mb-10 border-2 border-dashed border-slate-300">
-                  <p className="text-slate-400 font-black uppercase tracking-[0.3em] text-[10px] mb-3">Disponibilidad</p>
-                  <p className="text-slate-900 font-black text-2xl uppercase">Próximo Lanzamiento</p>
+                <h3 className="text-3xl font-black text-slate-900 mb-6 uppercase tracking-tighter leading-none">Programa TOEFL<br/><span className="text-blue-600 text-lg">Glish 2026</span></h3>
+                
+                {/* Precio de Contado */}
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-8 px-10 rounded-3xl mb-6 text-white">
+                  <p className="text-blue-200 font-black uppercase tracking-[0.3em] text-[10px] mb-2">Pago de Contado</p>
+                  <p className="text-5xl font-black">$13,000</p>
+                  <p className="text-blue-200 text-sm mt-2">MXN · Programa completo</p>
                 </div>
-                <p className="text-slate-500 text-xs font-bold leading-relaxed mb-12">
-                  Regístrate ahora para ser de los primeros en recibir los <br/><span className="text-blue-600">precios de preventa exclusiva</span>.
-                </p>
-                <button className="w-full bg-slate-900 text-white font-black py-6 rounded-3xl hover:bg-blue-600 transition-all shadow-2xl uppercase tracking-widest text-xs hover:scale-105 duration-300">
-                  Reservar mi Alerta VIP
-                </button>
+
+                {/* Precio Mensualidades */}
+                <div className="bg-slate-100 py-6 px-10 rounded-3xl mb-8 border-2 border-dashed border-slate-300">
+                  <p className="text-slate-400 font-black uppercase tracking-[0.3em] text-[10px] mb-2">Pago en Mensualidades</p>
+                  <p className="text-slate-900 font-black text-3xl">$4,000 <span className="text-lg font-medium text-slate-500">/ mes</span></p>
+                  <p className="text-slate-500 text-sm mt-2">4 pagos durante el programa</p>
+                </div>
+
+                {/* Datos Bancarios */}
+                <div className="text-left bg-slate-50 p-6 rounded-2xl mb-8 border border-slate-200">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4">Datos para Transferencia</p>
+                  <div className="space-y-3 text-sm">
+                    <p><span className="font-bold text-slate-700">Banco:</span> <span className="text-slate-600">BBVA</span></p>
+                    <p><span className="font-bold text-slate-700">Beneficiario:</span> <span className="text-slate-600">ESENCIAL IDIOMAS SA DE CV</span></p>
+                    <p><span className="font-bold text-slate-700">Cuenta:</span> <span className="font-mono text-slate-600">0112706776</span></p>
+                    <p><span className="font-bold text-slate-700">CLABE:</span> <span className="font-mono text-slate-600">012320001127067761</span></p>
+                  </div>
+                </div>
+
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full bg-green-500 hover:bg-green-600 text-white font-black py-6 rounded-3xl transition-all shadow-2xl uppercase tracking-widest text-xs hover:scale-105 duration-300 flex items-center justify-center gap-3">
+                  <i className="fab fa-whatsapp text-xl"></i>
+                  Inscribirme por WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -283,12 +304,12 @@ const App: React.FC = () => {
             Un sistema honesto, un grupo de expertos y la mejor tecnología de IA educativa del mundo. Estás a un paso de tu meta.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
-            <button className="w-full sm:w-auto bg-white text-blue-900 font-black px-16 py-7 rounded-3xl hover:bg-blue-50 transition shadow-2xl uppercase tracking-widest text-sm hover:scale-110 active:scale-95 duration-300">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-white text-blue-900 font-black px-16 py-7 rounded-3xl hover:bg-blue-50 transition shadow-2xl uppercase tracking-widest text-sm hover:scale-110 active:scale-95 duration-300">
               Postular al Programa
-            </button>
-            <button className="w-full sm:w-auto bg-transparent border-2 border-white/30 text-white font-black px-16 py-7 rounded-3xl hover:bg-white/10 transition uppercase tracking-widest text-sm backdrop-blur-md">
+            </a>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-transparent border-2 border-white/30 text-white font-black px-16 py-7 rounded-3xl hover:bg-white/10 transition uppercase tracking-widest text-sm backdrop-blur-md">
               Chatear con Soporte
-            </button>
+            </a>
           </div>
           <p className="mt-24 text-white/20 text-[10px] font-black uppercase tracking-[1em]">GLISH • ELITE • ONLINE</p>
         </div>
@@ -317,9 +338,6 @@ const App: React.FC = () => {
           </p>
         </div>
       </footer>
-
-      {/* AI Assistant FAB */}
-      <AIAssistant />
     </div>
   );
 };
